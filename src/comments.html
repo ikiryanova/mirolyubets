@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Миролюбец</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+
+  <!-- Yandex.Metrika counter -->
+  <script>
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k,
+        a)
+    })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+    ym(55076560, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+      trackHash: true
+    });
+  </script> <noscript>
+    <div><img src="https://mc.yandex.ru/watch/55076560" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript> <!-- /Yandex.Metrika counter -->
+
+  <!-- Всплывающее модальное окно -->
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+
+      <div class="modal-block">
+        <div class="modal__title">Оставьте свои данные и наш менеджер свяжется
+          с Вами
+        </div>
+
+        <form action="smart.php" method="POST" id="modal-form">
+          <div class="input-wrap">
+            <input type="text" name="username" class="input modal__input username" placeholder="Ваше имя">
+          </div>
+          <div class="input-wrap">
+            <input type="tel" name="userphone" class="input modal__input phone userphone" placeholder="Ваш телефон">
+          </div>
+          <div class="input-wrap">
+            <input type="email" name="email" class="input modal__input useremail" placeholder="Ваш email">
+          </div>
+          <button type="submit" class="button modal__button">Заказать обратный звонок</button>
+        </form>
+
+        <!-- <div class="success"></div> -->
+
+        <div class="modal__call-back">Или Вы можете перезвонить нам сами
+          по телефону:
+        </div>
+        <a href="tel:8(950)321-65-55" class="modal__tel">8 (950) 321-65-55</a>
+      </div>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Окно спасибо за заявку -->
+  <div class="modal-thank" id="thank">
+    <div class="modal-thank__dialog">
+      <button class="modal-dialog__close" id="close-thank"
+        onclick="ym(55076560, 'reachGoal', 'close-thank'); return true;">&times;</button>
+      <h4 class="modal-dialog__title">Спасибо за заявку, скоро мы вам перезвоним.</h4>
+    </div>
+  </div>
+
+  <!-- mobile-menu -->
+  <div class="overlay">
+    <div class="mobile-menu">
+      <div class="mobile-menu__header">
+        <div class="mobile-menu__close">&#10006;</div>
+        <div class="mobile-login">
+          <a href="#" class="mobile-login__login">Логин</a>
+          <a href="#" class="mobile-login__reg">Регистрация</a>
+        </div>
+      </div>
+      <ul class="m-menu-list">
+        <li class="m-menu-list__item">
+          <a class="m-menu-list__item-link" href="index.html">Главная</a>
+        </li>
+        <li class="m-menu-list__item">
+          <a class="m-menu-list__item-link" href="#about">О компании</a>
+        </li>
+        <li class="m-menu-list__item">
+          <a class="m-menu-list__item-link" href="news.html">Новости</a>
+        </li>
+        <li class="m-menu-list__item">
+          <a class="m-menu-list__item-link" href="services.html">Услуги</a>
+        </li>
+        <li class="m-menu-list__item">
+          <a class="m-menu-list__item-link" href="comments.html">Отзывы</a>
+        </li>
+        <li class="m-menu-list__item">
+          <a class="m-menu-list__item-link contacts-modal" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- mobile-menu -->
+
+  <div class="header">
+    <div class="container">
+      <div class="header-block">
+        <ul class="header-list">
+          <li class="header-list__item">
+            <a href="tel:8(950)321-65-55" class="header-list__icon"><i class="fa fa-phone"></i></a>
+            <a href="tel:8(950)321-65-55" class="header-list__phone">8 (950) 321-65-55</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#" class="header-list__icon"><i class="fa fa-map-marker"></i></a>
+            <a href="#" class="header-list__address">Ул. Мира 6, дом 1, офис 4.</a>
+          </li>
+        </ul>
+
+        <div class="header-login">
+          <a href="#" class="header-login__login">Логин</a>
+          <a href="#" class="header-login__reg">Регистрация</a>
+        </div>
+
+      </div>
+      <!-- /.header-block -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.header -->
+
+  <div class="navbar-mobile">
+    <div class="container">
+      <div class="nav-block">
+        <!-- конопка-гамбургер -->
+        <a href="#" class="menu-btn"><span class="span"></span></a>
+        <a href="index.html" class="main-logo">
+          <div class="navbar-logo">
+            <img src="image/navbar/logo.png" alt="логотип" class="navbar-logo__logo">
+            <div class="navbar-logo__text">
+              <h1 class="navbar-logo__title">Миролюбец</h1>
+              <span class="navbar-logo__subtitle">закроем ваши крылья</span>
+            </div>
+          </div>
+        </a>
+        <div class="navbar-wrap">
+          <div class="navbar-login">
+            <a href="#" class="navbar-login__login">Логин</a>
+            <a href="#" class="navbar-login__reg">Регистрация</a>
+          </div>
+          <button class="navbar__btn button-call">
+            <img src="image/navbar/nav-btn.png" alt="кнопка">
+          </button>
+        </div>
+      </div>
+      <!-- /.header-block -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.header -->
+
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-block">
+        <a href="index.html" class="main-logo">
+          <div class="navbar-logo">
+            <img src="image/navbar/logo.png" alt="логотип" class="navbar-logo__logo">
+            <div class="navbar-logo__text">
+              <h2 class="navbar-logo__title">Миролюбец</h2>
+              <span class="navbar-logo__subtitle">закроем ваши крылья</span>
+            </div>
+          </div>
+        </a>
+        <!-- /.navbar-logo -->
+        <div class="navbar-menu" id="navbar-menu">
+          <a href="index.html" class="navbar-menu__link">Главная</a>
+          <a href="#about" class="navbar-menu__link">О компании</a>
+          <a href="news.html" class="navbar-menu__link">Новости</a>
+          <a href="services.html" class="navbar-menu__link">Услуги</a>
+          <a href="comments.html" class="navbar-menu__link">Отзывы</a>
+          <a href="#" class="navbar-menu__link contacts-modal">Контакты</a>
+        </div>
+        <!-- конопка-гамбургер -->
+        <a href="#" class="menu-btn"><span class="span"></span></a>
+
+        <!-- /.navbar-list -->
+        <button class="navbar__btn button-call">
+          <img src="image/navbar/nav-btn.png" alt="кнопка">
+        </button>
+        <!-- /.button navbar__btn -->
+      </div>
+      <!-- /.navbar-block -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.navbar -->
+
+  <div class="comments">
+    <div class="container">
+      <h2 class="comments__title">Отзывы наших клиентов</h2>
+      <div class="comments-block">
+
+        <div class="comment">
+          <div class="comment-up">
+            <div class="comment-stars">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <div class="comment__text">С другой стороны консультация с широким активом в значительной степени
+              обуславливает создание направлений прогрессивного развития. Значимость
+            </div>
+          </div>
+          <!-- /.comment-up -->
+          <div class="comment-down">
+            <img src="image/comments/comment.png" alt="клиент" class="comment__img">
+            <div class="comment__user">
+              <div class="comment__name">Ольга Петрова</div>
+              <div class="comment__work">Web-дизайнер</div>
+            </div>
+          </div>
+          <!-- /.comment-down -->
+        </div>
+        <!-- /.comment -->
+
+        <div class="comment">
+          <div class="comment-up">
+            <div class="comment-stars">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <div class="comment__text">С другой стороны консультация с широким активом в значительной степени
+              обуславливает создание направлений прогрессивного развития. Значимость
+            </div>
+          </div>
+          <!-- /.comment-up -->
+          <div class="comment-down">
+            <img src="image/comments/comment.png" alt="клиент" class="comment__img">
+            <div class="comment__user">
+              <div class="comment__name">Ольга Петрова</div>
+              <div class="comment__work">Web-дизайнер</div>
+            </div>
+          </div>
+          <!-- /.comment-down -->
+        </div>
+        <!-- /.comment -->
+
+        <div class="comment">
+          <div class="comment-up">
+            <div class="comment-stars">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <div class="comment__text">С другой стороны консультация с широким активом в значительной степени
+              обуславливает создание направлений прогрессивного развития. Значимость
+            </div>
+          </div>
+          <!-- /.comment-up -->
+          <div class="comment-down">
+            <img src="image/comments/comment.png" alt="клиент" class="comment__img">
+            <div class="comment__user">
+              <div class="comment__name">Ольга Петрова</div>
+              <div class="comment__work">Web-дизайнер</div>
+            </div>
+          </div>
+          <!-- /.comment-down -->
+        </div>
+        <!-- /.comment -->
+
+      </div>
+      <!-- /.comments-block -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.comments -->
+
+
+  <div class="consult">
+    <div class="container">
+      <div class="consult-block">
+        <div class="consult-text">
+          <h2 class="consult-text__title">Получите бесплатную консультацию!</h2>
+          <div class="consult-text__subtitle">Отправте заявку и наши сотрудники свяжутся с Вами прямо сейчас</div>
+        </div>
+        <!-- /.consult-text -->
+        <div class="consult-buttons">
+          <button class="button consult-buttons__call button-call">заказать звонок</button>
+          <button class="button consult-buttons__signup contacts-modal"
+            onclick="ym(55076560, 'reachGoal', 'button'); return true;">записаться на прием</button>
+        </div>
+        <!-- /.consult-buttons -->
+      </div>
+      <!-- /.consult-block -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.consult -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-block">
+        <div class="wrap-left">
+          <div class="footer-column">
+            <a href="index.html" class="main-logo">
+              <div class="footer-logo">
+                <img src="image/footer/footer-logo.png" alt="логотип" class="footer-logo__logo">
+                <div class="footer-logo__text">
+                  <h2 class="footer-logo__title">Миролюбец</h2>
+                  <span class="footer-logo__subtitle">закроем ваши крылья</span>
+                </div>
+              </div>
+            </a>
+            <div class="footer__text">
+              С другой стороны консультация с широким активом в значительной степени обуславливает создание
+            </div>
+            <div class="footer-social">
+              <a href="#" class="footer-social__icon"><i class="fa fa-vk" aria-hidden="true"></i></a>
+              <a href="#" class="footer-social__icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#" class="footer-social__icon"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+
+          </div>
+          <!-- /.footer-column -->
+          <div class="footer-menu-1">
+            <h2 class="footer-menu__title">О компании</h2>
+            <!-- /.footer__title -->
+            <a href="#" class="footer-menu__link">Новости</a>
+            <a href="#" class="footer-menu__link">Анонсы</a>
+            <a href="#" class="footer-menu__link contacts-modal">Контакты</a>
+          </div>
+          <!-- /.footer-menu -->
+        </div>
+        <!-- /.wrap-left -->
+
+        <div class="wrap-right">
+          <div class="footer-menu-2">
+            <h2 class="footer-menu__title">Наши услуги</h2>
+            <!-- /.footer__title -->
+            <a href="#" class="footer-menu__link">Психология</a>
+            <a href="#" class="footer-menu__link">Психоаналитика</a>
+            <a href="#" class="footer-menu__link">Услуги медиатора</a>
+          </div>
+          <!-- /.footer-menu -->
+          <div class="footer-menu-3">
+            <a href="#" class="footer-menu__link">Психология</a>
+            <a href="#" class="footer-menu__link">Психоаналитика</a>
+            <a href="#" class="footer-menu__link">Услуги медиатора</a>
+          </div>
+          <!-- /.footer-menu -->
+        </div>
+        <!-- /.wrap-right -->
+      </div>
+      <!-- /.footer-block -->
+      <div class="footer__line"></div>
+      <div class="footer-create">
+        <span class="footer-create__text-1">Создание и продвижение сайта:</span>
+        <span class="footer-create__text-2">Glo Academy</span>
+      </div>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/slick.min.js"></script>
+
+</body>
+
+</html>

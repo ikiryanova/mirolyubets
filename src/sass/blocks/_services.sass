@@ -1,0 +1,180 @@
+.services 
+  position: relative
+  background-color: $bcg-grey
+  padding: 79px 0 85px
+  z-index: 2
+  &-circles 
+    position: absolute
+    top: -364px
+    right: 0
+    z-index: -1
+  &-title 
+    display: flex
+    justify-content: space-between
+    &__title 
+      display: inline-block
+      font-size: 41px
+      margin-top: 0
+      margin-bottom: 71px
+  &-buttons 
+    width: 500px
+    display: flex
+    justify-content: center
+    margin-top: 7px
+    &__btn 
+      font-size: 14px
+      +bold 
+      color: $text-color-dark
+      background-color: transparent
+      // padding: 0
+      width: 170px
+      height: 40px
+      // &:hover
+      //   width: 170px
+      //   height: 40px
+      //   // padding: 15px 23px
+      //   background-color: $color-pink
+      //   border-radius: 20px
+      //   color: #fff
+  &-cards 
+    display: flex 
+    justify-content: space-between
+  &-wrap 
+    width: 585px
+    display: flex
+    justify-content: space-between
+  &-card 
+    text-align: center
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.05)
+    background-color: #fff
+    &__image 
+      width: 276px
+      height: 252px
+      & img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__title 
+      font-size: 22px
+      +bold 
+      width: 208px
+      margin: 37px auto 16px
+      color: $color-pink
+      line-height: 28px
+    &__subtitle, &__text 
+      font-size: 15px
+    &__subtitle 
+      margin-bottom: 8px
+    &__text
+      position: relative
+      margin-bottom: 46px
+      &:after
+        background-color: $text-color-dark
+        opacity: 0.09
+        display: block
+        content: ""
+        height: 2px
+        width: 19%
+        left: 50%
+        bottom: -23px
+        // transition: 0.2s
+        position: absolute
+        transform: translateX(-50%)
+    &__cost 
+      font-size: 14px
+      margin: -4px auto 2px
+    &__value 
+      font-size: 24px
+      +bold
+      color: $color-pink
+      margin-bottom: 38px
+    // &:hover 
+    //   background-color: $color-pink 
+    //   color: #fff
+    //   .services-card__title, .services-card__value
+    //     color: #ffffff
+    //   .services-card__text
+    //     position: relative
+    //     &:after
+    //       background-color: #ffffff
+    //       opacity: 1
+          
+    
+@media (min-width: 993px)
+  .services 
+    &-card 
+      &:hover 
+        background-color: $color-pink 
+        color: #fff
+        .services-card__title, .services-card__value
+          color: #ffffff
+        .services-card__text
+          position: relative
+          &:after
+            background-color: #ffffff
+            opacity: 1
+    &-buttons 
+      &__btn 
+        &:hover
+          width: 170px
+          height: 40px
+          // padding: 15px 23px
+          background-color: $color-pink
+          border-radius: 20px
+          color: #fff
+@media (max-width: 1250px)
+  .services 
+    &-cards 
+      flex-wrap: wrap 
+    &-wrap 
+      margin: 0 auto
+      &:first-child
+        margin-bottom: 36px 
+    &-circles 
+      display: none
+@media (max-width: 992px)
+  .services 
+    &-title 
+      &__title 
+        font-size: 28px 
+    &-buttons 
+      &__btn 
+        width: 160px 
+        font-size: 12px
+@media (max-width: 715px)
+  .services 
+    &-title 
+      flex-direction: column
+      &__title 
+        margin-bottom: 40px
+    &-buttons 
+      justify-content: flex-start
+      margin-bottom: 30px
+      &__btn 
+        width: 136px 
+        &:first-child 
+          width: 87px
+          padding-left: 0
+@media (max-width: 615px)
+  .services  
+    &-wrap
+      flex-direction: column
+      align-items: center
+    &-card 
+      width: 276px
+      &:first-child
+        margin-bottom: 36px
+    &-buttons 
+      max-width: 360px
+@media (max-width: 478px) 
+  .services 
+    padding: 65px 0 85px
+    &-buttons 
+      flex-direction: column
+      align-items: center
+      width: 140px
+      height: 92px
+      margin: 0 auto 30px
+
+
+     

@@ -1,0 +1,107 @@
+*
+  box-sizing: border-box
+body
+  -moz-osx-font-smoothing: grayscale
+  +reg
+img
+  max-width: 100%
+.container
+  max-width: 1200px
+  margin: 0 auto
+.button
+  border: none
+  outline: none
+  border-radius: 25px
+.section-title 
+  +bold 
+  color: $text-color-light
+  position: relative
+  &:after
+    background-color: $title-line
+    display: block
+    content: ""
+    height: 4px
+    width: 95px
+    left: 0%
+    bottom: -19px
+    // transition: 0.2s
+    position: absolute
+.button 
+    border: none 
+    outline: none
+    text-transform: uppercase
+    cursor: pointer
+.input
+  border: 1px solid $color-violet
+  padding: 17px 24px
+  font-size: 15px
+  border-radius: 10px
+  &:focus
+    outline: none
+    border: 1px solid $color-pink
+input.invalid
+  border: 1px solid red
+  border-radius: 10px
+label.invalid
+  color: red
+  display: inline-block
+  font-size: 11px
+  position: absolute
+  display: block
+  bottom: 5px
+  left: 30px
+.input-wrap 
+  position: relative
+.card__link 
+  display: inline-block
+  text-decoration: none 
+  color: $color-pink
+  font-size: 15px 
+  +bold 
+  position: relative
+  text-transform: uppercase
+  &:after
+    background-color: $color-pink
+    display: block
+    content: ""
+    height: 3px
+    width: 60%
+    left: 50%
+    bottom: -12px
+    position: absolute
+    transform: translateX(-50%)
+.main__btn 
+  +bold
+  width: 206px
+  height: 49px
+  border-radius: 25px
+  background-color: #ffffff
+  color: $color-violet
+  margin-top: 25px
+  font-size: 14px
+.air 
+  padding: 26px 0 26px
+  background-color: $bcg-grey
+.main-logo 
+  text-decoration: none
+@media (max-width: 1250px)
+  .container
+    max-width: 920px
+@media (max-width: 992px)
+  .container
+    max-width: 670px
+// @media (max-width: 890px)
+//   .container
+//     max-width: 670px
+@media (max-width: 715px)
+  .container
+    max-width: 570px
+@media (max-width: 615px)
+  .container
+    max-width: 420px
+@media (max-width: 478px)
+  .container
+    max-width: 320px
+@media (max-width: 340px) 
+ .section-title 
+    margin-left: 20px

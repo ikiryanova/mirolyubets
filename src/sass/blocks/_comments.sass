@@ -1,0 +1,105 @@
+.comments 
+  min-height: 768px
+  background-size: cover
+  padding: 92px 0 176px
+  background-size: cover
+  background-color: $main-color
+  height: 100%
+  &-block 
+    display: flex 
+    justify-content: space-between
+  &__title 
+    text-align: center
+    margin: 0 auto 94px
+    max-width: 498px
+    font-size: 41px 
+    color: #ffffff
+    position: relative
+    letter-spacing: 0.6px
+    &:after
+      background-color: #fff
+      display: block
+      content: ""
+      height: 3px
+      width: 19%
+      left: 50%
+      bottom: -81%
+      position: absolute
+      transform: translateX(-50%)
+.comment 
+  max-width: 379px
+  &__text 
+    margin-top: 23px
+    font-size: 15px
+  &__name 
+    font-size: 22px
+    color: #ffffff
+    +bold
+    margin-top: 17px 
+    margin-bottom: 9px
+  &__work 
+    font-size: 14px
+    color: #ffffff
+    +bold
+  &__img 
+    margin-left: 22px
+  &-up 
+    padding: 50px 39px 51px 35px
+    background-color: #fff
+    color: $text-news
+    line-height: 24px
+    margin-bottom: 32px
+    position: relative
+    &:after 
+      content: ""
+      width: 0
+      height: 0
+      position: absolute
+      left: 37px
+      bottom: -42px
+      border: 22px solid transparent
+      border-top-color: #ffffff
+  &-down 
+    display: flex
+    justify-content: space-between
+    width: 274px
+    margin-top: 40px
+.fa-star 
+  color: $color-pink
+  &:last-child
+    color: $icon-news
+@media (min-width: 1251px)
+  .comments
+    background: url('../image/comments/comments-bg.jpg') no-repeat center
+    background-size: cover
+  // background-image: linear-gradient(to top, #816890 0%, #dc7aa3 100%)
+@media (max-width: 1250px)
+  .comments
+    background-image: linear-gradient(to top, #816890 0%, #dc7aa3 100%)
+    &-block 
+      flex-wrap: wrap
+      justify-content: center
+  .comment 
+    &:first-child
+      margin-right: 38px
+    &:last-child
+      margin-top: 50px
+@media (max-width: 992px) 
+  .comments
+    padding-bottom: 100px
+    &__title 
+      font-size: 28px
+  .comment 
+    &:first-child
+      margin-right: 0
+      margin-bottom: 50px
+@media (max-width: 478px)
+  .comment 
+    padding: 0 20px 0 20px
+    &-up 
+      padding-right: 30px
+      padding-left: 30px
+    &s 
+      &__title 
+        &:after 
+          bottom: -42%

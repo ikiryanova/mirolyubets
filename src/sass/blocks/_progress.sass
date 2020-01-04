@@ -1,0 +1,53 @@
+.progress 
+  background-color: $progress-bgc
+  padding: 139px 0 120px
+  &-block 
+    display: flex
+    justify-content: space-between
+    width: 1078px
+    margin: 0 auto 
+  &-wrap 
+    display: flex
+    width: 448px
+    justify-content: space-between
+    &:first-child
+      width: 420px
+  &-card 
+    text-align: center
+    &__value 
+      color: $main-color
+      margin: 10px 0 8px
+      font-size: 54px 
+      +bold
+    &__text 
+      color: #fff
+      font-size: 20px
+@media (max-width: 1250px)
+  .progress 
+    padding: 89px 0 84px
+    &-block 
+      flex-direction: column
+      width: 920px
+    &-wrap 
+      margin: 0 auto
+      &:first-child
+        margin-bottom: 70px 
+@media (max-width: 992px)
+  .progress 
+    &-block 
+      width: 420px
+    &-card 
+      &__value 
+        font-size: 34px
+      &__text 
+        font-size: 18px
+@media (max-width: 615px)
+  .progress 
+    &-wrap
+      width: 270px
+      &:first-child  
+        width: 230px
+@media (max-width: 478px)
+  .progress 
+    &-block 
+      width: 280px

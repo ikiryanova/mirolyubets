@@ -1,0 +1,92 @@
+.hero 
+  // background: url('../image/hero/hero-bg.png') no-repeat
+  background-position: center
+  // background-size: contain
+  // min-height: 916px
+  background-size: cover
+  position: relative
+  background-color: $main-color
+  height: 100%
+  // min-height: 910px
+  // background-color: #9e96bc
+  // background: url(../image/hero/hero-bg.png) center no-repeat
+  padding: 305px 0 245px
+  &-block 
+    position: relative 
+    text-align: center
+    margin: 0 auto
+  // &-girl 
+  //   position: absolute 
+  //   // margin-top: 31px
+  //   top: 31px
+  //   left: -46px
+  // &-bird
+  //   &__left 
+  //     position: absolute
+  //     bottom: -14px
+  //     left: 39px
+  //   &__right 
+  //     position: absolute 
+  //     bottom: 0 
+  //     right: 746px
+  &-wrap 
+    position: relative
+  &-text 
+    // position: absolute 
+    max-width: 594px
+    top: 0
+    right: 0
+    +bold 
+    color: #ffffff
+    margin-left: auto
+    text-align: left
+    &__title 
+      font-size: 88px
+      margin-top: 7px
+      letter-spacing: 0.6px
+      margin-bottom: 19px  
+      text-transform: uppercase
+    &__subtitle 
+      font-size: 25px
+      text-transform: uppercase
+    &__text 
+      line-height: 25px 
+      +reg
+      font-size: 16px
+@media (min-width: 993px)
+  .hero
+    background: url('../image/hero/hero-bg.jpg') no-repeat
+    background-position: center
+    min-height: 923px
+    background-size: cover
+@media (max-width: 992px) 
+  .hero 
+    background: url('../image/hero/hero-bg-small.jpg')
+    background-size: cover
+    &-text 
+      margin: 0 auto
+@media (max-width: 800px)
+  .hero
+    padding: 167px 0 164px
+@media (max-width: 715px)
+  .hero
+    &-text
+      max-width: 447px 
+      &__title 
+        font-size: 64px
+      &__subtitle 
+        font-size: 18px
+@media (max-width: 478px)
+  .hero 
+    background: url('../image/hero/gradient.jpg')
+    background-size: cover
+    padding: 150px 0 134px
+    &-text
+      max-width: 280px 
+      &__title 
+        font-size: 44px
+        margin-bottom: 15px
+      &__subtitle 
+        font-size: 13px
+      &__text 
+        font-size: 11px

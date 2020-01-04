@@ -1,0 +1,93 @@
+.overlay
+	position: fixed
+	width: 100%
+	height: 100%
+	background: rgba(#000, 0.7)
+	z-index: 150
+	display: none
+	justify-content: space-between
+	transition: all 0.5s
+.mobile-menu
+	position: relative
+	background: $main-color
+	width: 284px
+	height: 100vh
+	top: 0
+	left: -100%
+	margin: 0
+	z-index: 99
+	transition: all 0.9s
+	&__header
+		position: relative
+		height: 56px
+		background: $color-pink
+	&__close
+		position: absolute
+		right: 15px
+		top: 15px
+		color: #ffffff
+		cursor: pointer
+	.m-menu
+		&-list
+			flex-direction: column
+			padding: 0
+			list-style-type: none
+			+reg
+			&__item
+				position: relative
+				padding: 10px 0
+				&:after
+					content: ""
+					position: absolute
+					bottom: 0
+					display: block
+					width: 100%
+					height: 2px
+					background: rgba($title-line, 0.11)
+				&:first-child
+					padding-top: 0
+				&:last-child a
+					&:after
+						content: none
+				a
+					display: block
+					padding-left: 20px
+					color: #ffffff
+					text-decoration: none			
+		&-hover
+			padding: 0
+			list-style-type: none
+			&__item
+				position: relative
+				padding: 10px 0 10px 20px
+				&:after
+					content: ""
+					position: absolute
+					bottom: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 1px
+					background: rgba(#000, 0.11)
+				&:last-child
+					&:after
+						content: none
+.mobile-menu a.drop-menu
+	color: $color-violet
+.overlay-vizible
+	display: block
+.active-menu
+	left: -0%
+.mobile 
+  &-login 
+    +reg
+    position: absolute
+    margin: 20px 0 10px 20px
+    &__login, &__reg
+      color: #ffffff
+      text-decoration: none
+      font-size: 14px
+    &__login
+      border-right: 1px solid #bcbcbc
+      padding-right: 10px
+      margin-right: 10px

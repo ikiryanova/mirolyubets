@@ -1,0 +1,83 @@
+.offer 
+  background-size: cover
+  min-height: 903px
+  padding: 236px 0 246px
+  background-color: $main-color
+  height: 100%
+  &-block 
+    position: relative
+  &-text 
+    display: inline-block
+    position: absolute
+    top: -4px
+    right: 68px
+  &__subtitle
+    font-size: 20px 
+    color: #ffffff
+    text-transform: uppercase
+    margin-bottom: 24px  
+  &__title 
+    font-size: 114px
+    max-width: 553px
+    color: #fff
+    text-transform: uppercase
+    +bold
+    position: relative
+    line-height: 117px
+  &__span 
+    font-size: 61px
+    display: block
+    line-height: 74px
+  &__btn 
+    color: $text-color-dark
+@media (min-width: 1251px)
+  .offer 
+    background: url('../image/offer/offer-bg.jpg') no-repeat center
+    background-size: cover
+@media (max-width: 1250px)
+  .offer
+    background: url('../image/offer/offer-bg-small.jpg') no-repeat center
+    background-size: cover
+    &-text 
+      right: 20%
+@media (max-width: 992px)
+  .offer 
+    &-text 
+      right: 10%
+@media (max-width: 715px)
+  .offer
+    padding-top: 190px
+    min-height: 709px
+    &-text
+      max-width: 366px
+    &__title 
+      font-size: 64px
+      line-height: 64px
+    &__subtitle 
+      font-size: 16px
+    &__span 
+      font-size: 40px
+      line-height: 52px
+@media (max-width: 615px)
+  .offer 
+    &-text 
+      right: 0
+      // max-width: 366px
+    &__title, &__subtitle
+      display: inline-block 
+@media (max-width: 478px)
+  .offer
+    padding: 90px 0 150px
+    min-height: 409px
+    &-text
+      max-width: 280px 
+    &__title 
+      font-size: 44px
+      line-height: 49px
+    &__subtitle 
+      font-size: 13px
+      margin-bottom: 15px
+    &__span 
+      line-height: 39px
+      font-size: 20px
+      
